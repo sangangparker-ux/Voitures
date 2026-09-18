@@ -1,8 +1,35 @@
-target/
-.git/
-*.iml
+# Versionnage (Git)
+.git
+.gitignore
+
+# Fichiers IDE (IntelliJ, VSCode, Eclipse...)
 .idea/
 .vscode/
-*.env
+*.iml
+.settings/
+.classpath
+.project
+
+# Artefacts de build (Maven & Gradle)
+target/
+build/
+.gradle/
+!target/*.jar
+
+# Fichiers de logs et temporaires
+*.log
+logs/
+tmp/
+
+# Fichiers d'environnement et secrets (à exclure absolument !)
 .env
-application-local.properties
+.env.*
+*.env
+
+# Fichiers système (macOS, Windows)
+.DS_Store
+Thumbs.db
+
+# Docker (optionnel, pour éviter de se copier lui-même)
+Dockerfile*
+docker-compose*
